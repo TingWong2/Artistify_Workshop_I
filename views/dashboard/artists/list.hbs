@@ -20,8 +20,8 @@
                 {{else}}
                 <td>❌</td>
                 {{/if}}
-                <td><i class="fas fa-pen"></i></td>
-                <td><i class="fas fa-trash"></i></td>
+                <td><a href="/dashboard/artists/{{this._id}}/update"><i class="fas fa-pen"></i></a> </td>
+                <td> <a href="/dashboard/artists/{{this._id}}/delete"><i class="fas fa-trash"></i></a></td>
             </tr>
         {{/each}}
     </tbody>
