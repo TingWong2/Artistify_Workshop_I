@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+}
+
+table, th, tr, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0 5px;
+}
+
+table img {
+    height: 50px;
+}
+

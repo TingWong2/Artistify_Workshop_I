@@ -1,3 +1,28 @@
-<h1>artist page</h1>
-
-\o/
+<h1>All artists <a href="/dashboard/artists/create">➕</a></h1>
+<hr>
+<table>
+    <thead>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Band</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        {{#each artists}}
+            <tr>
+                <td><img src={{this.picture}} alt={{this.name}}></td>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                {{#if isBand}}
+                <td>✔️</td>
+                {{else}}
+                <td>❌</td>
+                {{/if}}
+                <td><i class="fas fa-pen"></i></td>
+                <td><i class="fas fa-trash"></i></td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
