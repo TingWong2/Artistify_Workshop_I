@@ -9,6 +9,7 @@ const indexRouter = require("./routes/index");
 const artistsRouter = require("./routes/artistsRoute");
 const indexDashRouter = require("./routes/indexDashRoute");
 
+
 const app = express();
 const hbs = require("hbs");
 
@@ -22,9 +23,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 hbs.registerPartials(__dirname + "/views/partials");
+
 app.use("/", indexRouter);
-app.use("/dashboard", artistsRouter);
 app.use("/dashboard", indexDashRouter);
+app.use("/dashboard/artists", artistsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
