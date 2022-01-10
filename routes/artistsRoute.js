@@ -41,17 +41,17 @@ router.get("/:id/delete", async (req, res, next) => {
 router.get("/:id/update", async (req, res, next) => {
   await ArtistModel.findById(req.params.id)
     .then((artist) => {
-      console.log(artist)
+      console.log(artist.description)
       res.render("dashboard/artists/update.hbs", { artist });
     })
     .catch((e) => console.error(e));
 });
 
 router.post("/:id/update", async (req, res, next) => {
-  await ArtistModel.findByIdAndUpdate(id, req.body, { new: true })
+  await ArtistModel.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((editedArtist) => {
       console.log(editedArtist);
-      res.redirect("/dashboard/artist");
+      res.redirect("/dashboard/artists");
     })
     .catch((e) => console.error(e));
 });
