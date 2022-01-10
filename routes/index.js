@@ -1,12 +1,13 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
-router.get('/dashboard', function(req, res, next) {
-  res.render('/dashboard/index.hbs', );
+
+router.get("/dashboard", function (req, res, next) {
+  res.render("dashboard/indexDash.hbs");
 });
 
 module.exports = router;

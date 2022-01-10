@@ -1,9 +1,9 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/dashboard', function(req, res, next) {
-  res.render('artists.hbs', );
+router.get("/", function (req, res, next) {
+  res.render("artists.hbs");
 });
 
 module.exports = router;
